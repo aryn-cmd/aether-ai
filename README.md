@@ -167,7 +167,7 @@ The Aether Platform features an intuitive web-based dashboard with the following
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-org/aether-platform.git
+git clone https://github.com/aryn-cmd/aether-ai.git
 cd aether-platform
 ```
 
@@ -191,14 +191,9 @@ Visit `http://localhost:3000` in your browser.
 
 For collaborations with government agencies, researchers, or NGOs:
 
-**Email**: [your-email@domain.com]  
+**Email**: [aaryansach2005@gmail.com]  
 **Project**: Bhartiya Antariksh Hackathon - Team Aether
 
----
-
-## 📄 License
-
-[Add your license information here]
 
 ---
 
