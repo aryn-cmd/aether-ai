@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satellite AI Platform Wireframe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f2f4f7;
+      color: #333;
+    }
+    header {
+      background-color: #0a1e3d;
+      color: white;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 20px;
+    }
+    nav a {
+      color: white;
+      margin-left: 16px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      background-color: #e8ecf3;
+      padding: 12px 0;
+    }
+    .tabs button {
+      background: none;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #0a1e3d;
+    }
+    .tabs button.active {
+      border-bottom: 3px solid #0a1e3d;
+    }
+    .screen {
+      display: none;
+      padding: 16px;
+    }
+    .screen.active {
+      display: flex;
+    }
+    .sidebar {
+      width: 220px;
+      background: #ffffff;
+      border-right: 1px solid #ddd;
+      padding: 16px;
+    }
+    .sidebar h2 {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    .sidebar ul {
+      list-style: none;
+    }
+    .sidebar ul li {
+      margin: 10px 0;
+    }
+    .sidebar ul li input {
+      margin-right: 8px;
+    }
+    .map-area, .analytics-area, .alert-area, .admin-area {
+      flex: 1;
+      padding: 16px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      margin-left: 16px;
+    }
+    .placeholder {
+      width: 100%;
+      height: 400px;
+      background-color: #d1dbe9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #444;
+    }
+    footer {
+      background-color: #e2e6eb;
+      padding: 12px 24px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aether Platform</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Map View</a>
+      <a href="#">Analytics</a>
+      <a href="#">Alerts</a>
+      <a href="#">Admin</a>
+    </nav>
+  </header>
+
+  <div class="tabs">
+    <button class="tab-button active" data-tab="map">Map View</button>
+    <button class="tab-button" data-tab="analytics">Analytics</button>
+    <button class="tab-button" data-tab="alerts">Alerts</button>
+    <button class="tab-button" data-tab="admin">Admin Panel</button>
+  </div>
+
+  <div id="map" class="screen active">
+    <aside class="sidebar">
+      <h2>Layers</h2>
+      <ul>
+        <li><input type="checkbox" /> Glacial Lakes</li>
+        <li><input type="checkbox" /> Roads</li>
+        <li><input type="checkbox" /> Drainage</li>
+        <li><input type="checkbox" /> Elevation</li>
+        <li><input type="checkbox" /> Night Lights</li>
+      </ul>
+    </aside>
+    <div class="map-area">
+      <div class="placeholder">[Map View Area Placeholder]</div>
+    </div>
+  </div>
+
+  <div id="analytics" class="screen">
+    <aside class="sidebar">
+      <h2>Metrics</h2>
+      <ul>
+        <li>Lake Area Trend</li>
+        <li>Road Network Growth</li>
+        <li>Drainage Expansion</li>
+      </ul>
+    </aside>
+    <div class="analytics-area">
+      <div class="placeholder">[Analytics Dashboard Placeholder]</div>
+    </div>
+  </div>
+
+  <div id="alerts" class="screen">
+    <aside class="sidebar">
+      <h2>Recent Alerts</h2>
+      <ul>
+        <li>Lake Expansion in Sector A</li>
+        <li>Unauthorized Road in Forest Zone</li>
+        <li>Drainage Overlap in Region X</li>
+      </ul>
+    </aside>
+    <div class="alert-area">
+      <div class="placeholder">[Alerts List Placeholder]</div>
+    </div>
+  </div>
+
+  <div id="admin" class="screen">
+    <aside class="sidebar">
+      <h2>Admin Tools</h2>
+      <ul>
+        <li>Upload Training Data</li>
+        <li>Model Retraining</li>
+        <li>User Roles</li>
+        <li>Data Pipeline Status</li>
+      </ul>
+    </aside>
+    <div class="admin-area">
+      <div class="placeholder">[Admin Panel Placeholder]</div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Bhartiya Antariksh Hackathon - Team Aether
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const screens = document.querySelectorAll('.screen');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        screens.forEach(s => s.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
